@@ -17,10 +17,10 @@ export default function Home() {
           <HeroRow />
           <ExperienceSection />
           <SkillsSection />
-          <ProjectsSection />
+          {/* <ProjectsSection /> */}
           <EducationSection />
         </div>
-        <ContactCTA />
+        {/* <ContactCTA /> */}
       </main>
       <Footer />
       <BottomNav />

@@ -1,36 +1,37 @@
 import { skills } from "@/data/portfolio";
+import labels from "@/data/labels.json";
 
-const skillGroups = [
-  { title: "Frontend", icon: "layers", items: skills.frontend },
-  { title: "Platform", icon: "settings_suggest", items: skills.platform },
-];
+type SkillKey = keyof typeof skills;
+
+const skillGroups = labels.skills.groups.map((g) => ({
+  ...g,
+  items: skills[g.dataKey as SkillKey],
+}));
 
 export default function SkillsSection() {
   return (
     <>
-      {/* Section header */}
+      {/* Section header — full width */}
       <div
         id="skills"
-        className="bento-card col-span-1 flex flex-col justify-center rounded-2xl bg-secondary-container/10 p-6 md:col-span-4 md:p-8 lg:col-span-4"
+        className="bento-card bg-secondary-container/10 col-span-1 flex flex-col justify-center rounded-2xl p-6 md:col-span-4 md:p-8 lg:col-span-12"
       >
-        <span className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-secondary">
-          Stack
+        <span className="text-secondary mb-3 font-mono text-xs tracking-[0.2em] uppercase">
+          {labels.skills.overline}
         </span>
-        <h2 className="text-xl font-semibold text-on-surface">Technical Ecosystem</h2>
-        <p className="mt-2 text-sm text-on-surface-variant">
-          Expertise across the modern stack focused on performance and scale.
-        </p>
+        <h2 className="text-on-surface text-xl font-semibold">{labels.skills.heading}</h2>
+        <p className="text-on-surface-variant mt-2 text-sm">{labels.skills.description}</p>
       </div>
 
-      {/* Skill cards */}
+      {/* Skill cards — 3 across on desktop (2 rows of 3) */}
       {skillGroups.map((group) => (
         <div
           key={group.title}
           className="bento-card col-span-1 rounded-2xl p-6 md:col-span-2 lg:col-span-4"
         >
-          <div className="mb-5 flex items-center gap-2 text-primary">
+          <div className="text-primary mb-5 flex items-center gap-2">
             <span className="material-symbols-outlined">{group.icon}</span>
-            <h4 className="font-mono text-sm font-semibold uppercase tracking-wider">
+            <h4 className="font-mono text-sm font-semibold tracking-wider uppercase">
               {group.title}
             </h4>
           </div>
@@ -38,7 +39,7 @@ export default function SkillsSection() {
             {group.items.map((skill) => (
               <span
                 key={skill}
-                className="rounded-lg bg-secondary/10 px-3 py-1 font-mono text-xs text-secondary"
+                className="bg-secondary/10 text-secondary rounded-lg px-3 py-1 font-mono text-xs"
               >
                 {skill}
               </span>

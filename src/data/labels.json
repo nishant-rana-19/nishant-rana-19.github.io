@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "logo": "NISHANT.RANA",
+    "links": [
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Skills", "href": "#skills" }
+    ],
+    "cta": "Contact"
+  },
+  "hero": {
+    "overline": "Architecture & Design",
+    "title": "Software Engineer",
+    "description": "I bridge the gap between complex engineering requirements and elegant user interfaces. With over a decade of experience building scalable systems, I specialize in React ecosystems, micro-frontends, and performance-first architecture.",
+    "resumeButton": "Resume",
+    "email": "mailto:rananishant19@gmail.com",
+    "socialLabels": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    }
+  },
+  "skills": {
+    "overline": "Stack",
+    "heading": "Technical Ecosystem",
+    "description": "Expertise across the modern stack focused on performance and scale.",
+    "groups": [
+      { "title": "Frontend", "icon": "layers", "dataKey": "frontend" },
+      { "title": "Backend", "icon": "database", "dataKey": "backend" },
+      { "title": "Platform", "icon": "settings_suggest", "dataKey": "platform" },
+      { "title": "Observability", "icon": "monitoring", "dataKey": "observability" },
+      { "title": "Testing", "icon": "labs", "dataKey": "testing" },
+      { "title": "AI & Tools", "icon": "build", "dataKey": "tools" }
+    ]
+  },
+  "projects": {
+    "detailsLink": "Details"
+  },
+  "education": {
+    "overline": "Academic Foundation",
+    "heading": "Education",
+    "description": "Theoretical roots informing practical systems design."
+  },
+  "contact": {
+    "heading": "Ready to build something exceptional?",
+    "description": "I'm currently open to architectural consulting and senior leadership roles. Let's discuss how I can help your team ship faster, cleaner code.",
+    "emailButton": "Send an Email",
+    "callButton": "Schedule a Call"
+  },
+  "footer": {
+    "logo": "NISHANT.RANA",
+    "copyright": "© 2026 Crafted with intention.",
+    "links": {
+      "linkedin": "LINKEDIN",
+      "github": "GITHUB",
+      "resume": "RESUME"
+    }
+  },
+  "bottomNav": [
+    { "id": "projects", "label": "Work", "icon": "code" },
+    { "id": "skills", "label": "Stack", "icon": "layers" },
+    { "id": "education", "label": "About", "icon": "person" },
+    { "id": "contact", "label": "Contact", "icon": "mail" }
+  ]
+}

@@ -1,21 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const tabs = [
-  { id: "projects", label: "Work", icon: "code" },
-  { id: "skills", label: "Stack", icon: "layers" },
-  { id: "education", label: "About", icon: "person" },
-  { id: "contact", label: "Contact", icon: "mail" },
-];
+import labels from "@/data/labels.json";
 
 export default function BottomNav() {
-  const [activeTab, setActiveTab] = useState("projects");
+  const [activeTab, setActiveTab] = useState(labels.bottomNav[0].id);
 
   useEffect(() => {
     const onScroll = () => {
       const scrollY = window.scrollY + 140;
-      for (const tab of [...tabs].reverse()) {
+      for (const tab of [...labels.bottomNav].reverse()) {
         const el = document.getElementById(tab.id);
         if (el && el.offsetTop <= scrollY) {
           setActiveTab(tab.id);
@@ -29,7 +23,7 @@ export default function BottomNav() {
 
   return (
     <nav className="fixed bottom-0 z-50 flex h-20 w-full items-center justify-around rounded-t-2xl border-t border-outline-variant/30 bg-surface shadow-[0_-4px_20px_0_rgba(155,47,0,0.05)] md:hidden">
-      {tabs.map((tab) => {
+      {labels.bottomNav.map((tab) => {
         const active = activeTab === tab.id;
         return (
           <a

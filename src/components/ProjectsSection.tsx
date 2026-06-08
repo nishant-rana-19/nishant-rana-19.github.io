@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { projects } from "@/data/portfolio";
+import labels from "@/data/labels.json";
 
 export default function ProjectsSection() {
   return (
@@ -35,7 +36,7 @@ export default function ProjectsSection() {
               href={project.href}
               className="flex items-center gap-1 font-mono text-xs font-bold uppercase text-primary"
             >
-              Details
+              {labels.projects.detailsLink}
               <span className="material-symbols-outlined text-[16px]">north_east</span>
             </a>
           </div>

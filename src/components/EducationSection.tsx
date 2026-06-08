@@ -1,4 +1,5 @@
 import { education } from "@/data/portfolio";
+import labels from "@/data/labels.json";
 
 export default function EducationSection() {
   return (
@@ -8,19 +9,14 @@ export default function EducationSection() {
     >
       <div>
         <span className="mb-2 block font-mono text-xs uppercase tracking-[0.2em] text-primary">
-          Academic Foundation
+          {labels.education.overline}
         </span>
-        <h2 className="text-3xl font-bold text-on-surface">Education</h2>
-        <p className="mt-2 text-on-surface-variant">
-          Theoretical roots informing practical systems design.
-        </p>
+        <h2 className="text-3xl font-bold text-on-surface">{labels.education.heading}</h2>
+        <p className="mt-2 text-on-surface-variant">{labels.education.description}</p>
       </div>
       <div className="mt-8 space-y-6 md:mt-0">
         {education.map((item) => (
-          <div key={item.id} className="flex items-start gap-4">
-            <div className="rounded-lg bg-primary-container/10 p-3 text-primary">
-              <span className="material-symbols-outlined">{item.icon}</span>
-            </div>
+          <div key={item.id} className="flex items-start justify-between">
             <div>
               <h4 className="font-mono text-sm font-bold uppercase text-on-surface">
                 {item.degree}
