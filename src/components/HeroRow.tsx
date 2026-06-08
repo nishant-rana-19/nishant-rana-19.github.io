@@ -12,7 +12,7 @@ export default function HeroRow() {
         {/* Mobile: circular avatar */}
         <div className="mb-6 flex justify-center md:hidden">
           <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-white shadow-lg">
-            <Image src="/images/profile.jpg" alt="Profile" fill className="object-cover" />
+            <Image src="/images/profile_pic.jpg" alt="Profile" fill className="object-cover" />
           </div>
         </div>
 
