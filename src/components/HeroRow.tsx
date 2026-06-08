@@ -16,7 +16,7 @@ export default function HeroRow() {
           </div>
         </div>
 
-        <span className="text-primary mb-3 font-mono text-xs tracking-[0.2em] uppercase">
+        <span className="text-primary mb-3 text-center font-mono text-xs tracking-[0.2em] uppercase md:text-left">
           {hero.overline}
         </span>
 

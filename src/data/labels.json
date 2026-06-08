@@ -56,7 +56,7 @@
     }
   },
   "bottomNav": [
-    { "id": "projects", "label": "Work", "icon": "code" },
+    { "id": "experience", "label": "Work", "icon": "code" },
     { "id": "skills", "label": "Stack", "icon": "layers" },
     { "id": "education", "label": "About", "icon": "person" },
     { "id": "contact", "label": "Contact", "icon": "mail" }
