@@ -15,9 +15,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex.dev | Senior Frontend Architect",
+  title: "Nishant.Rana | Software Engineer",
   description:
-    "Senior Frontend Architect portfolio — React ecosystems, micro-frontends, and performance-first architecture.",
+    "Nishant Rana | High IC Software Engineer — React ecosystems, micro-frontends, and performance-first architecture.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +39,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         />
       </head>
-      <body className="bg-background font-sans text-on-surface antialiased">{children}</body>
+      <body className="bg-background text-on-surface font-sans antialiased">{children}</body>
     </html>
   );
 }

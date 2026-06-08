@@ -1,0 +1,56 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+  .sun { fill: #c2410c; filter: drop-shadow(0 0 8px #c2410c); }
+  .orbit { fill: none; stroke: #2d5a27; stroke-width: 1; stroke-opacity: 0.3; stroke-dasharray: 4 4; }
+  .planet { fill: #2d5a27; }
+  .moon { fill: #8b8b8b; }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .orbit-container {
+    transform-origin: 200px 200px;
+    animation: rotate linear infinite;
+  }
+
+  .inner-orbit { animation-duration: 10s; }
+  .middle-orbit { animation-duration: 20s; }
+  .outer-orbit { animation-duration: 35s; }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+  }
+  .sun-core {
+    transform-origin: 200px 200px;
+    animation: pulse 4s ease-in-out infinite;
+  }
+</style>
+</defs>
+<!-- Orbits -->
+<circle class="orbit" cx="200" cy="200" r="60"/>
+<circle class="orbit" cx="200" cy="200" r="100"/>
+<circle class="orbit" cx="200" cy="200" r="150"/>
+<!-- Sun -->
+<circle class="sun sun-core" cx="200" cy="200" r="25"/>
+<!-- Inner Planet -->
+<g class="orbit-container inner-orbit">
+  <circle class="planet" cx="260" cy="200" r="6"/>
+</g>
+<!-- Middle Planet with Moon -->
+<g class="orbit-container middle-orbit">
+  <g transform="translate(100, 200)">
+    <circle class="planet" cx="0" cy="0" r="10"/>
+    <g class="orbit-container inner-orbit" style="transform-origin: 0 0;">
+      <circle class="moon" cx="18" cy="0" r="3"/>
+    </g>
+  </g>
+</g>
+<!-- Outer Planet -->
+<g class="orbit-container outer-orbit">
+  <circle class="planet" cx="50" cy="200" r="12"/>
+</g>
+</svg>
